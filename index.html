@@ -35,7 +35,7 @@
       align-items: center;
     }
 
-    /* TÍTULO SUPERIOR "PARA TI..." */
+    /* TÍTULO SUPERIOR */
     .header-title {
       font-size: 2.1rem;
       font-weight: 700;
@@ -352,28 +352,49 @@
           <polygon points="125,300 250,560 375,300 250,330" fill="url(#tissuePaper)" opacity="0.9" />
         </g>
 
-        <!-- TALLOS -->
+        <!-- TALLOS PRINCIPALES Y LATERALES -->
         <g>
+          <!-- Tallos grandes centrales -->
           <path class="stem" style="--delay: 0.2s;" d="M 250 145 Q 248 300 250 480" fill="none" stroke="#163c1a" stroke-width="8" stroke-linecap="round"/>
           <path class="stem" style="--delay: 0.5s;" d="M 165 210 Q 185 340 248 480" fill="none" stroke="#1f4c24" stroke-width="7" stroke-linecap="round"/>
           <path class="stem" style="--delay: 0.8s;" d="M 335 210 Q 315 340 252 480" fill="none" stroke="#1f4c24" stroke-width="7" stroke-linecap="round"/>
           <path class="stem" style="--delay: 1.1s;" d="M 250 275 Q 250 380 250 480" fill="none" stroke="#255a2b" stroke-width="7" stroke-linecap="round"/>
 
-          <!-- Tallos Ramillete Izquierdo -->
-          <path class="stem" style="--delay: 0.6s;" d="M 246 480 Q 185 390 140 310" fill="none" stroke="#2d6a4f" stroke-width="2.2" stroke-linecap="round" />
-          <path class="stem" style="--delay: 1.2s;" d="M 140 310 Q 110 270 85 235" fill="none" stroke="#2d6a4f" stroke-width="1.8" stroke-linecap="round" />
-          <path class="stem" style="--delay: 1.2s;" d="M 140 310 Q 95 285 60 265" fill="none" stroke="#2d6a4f" stroke-width="1.8" stroke-linecap="round" />
-          <path class="stem" style="--delay: 1.2s;" d="M 140 310 Q 100 315 72 310" fill="none" stroke="#2d6a4f" stroke-width="1.6" stroke-linecap="round" />
-          <path class="stem" style="--delay: 1.2s;" d="M 140 310 Q 95 335 62 340" fill="none" stroke="#2d6a4f" stroke-width="1.6" stroke-linecap="round" />
-          <path class="stem" style="--delay: 1.2s;" d="M 140 310 Q 115 345 95 360" fill="none" stroke="#2d6a4f" stroke-width="1.6" stroke-linecap="round" />
+          <!-- ==================================================== -->
+          <!-- TALLOS RAMILLETE IZQUIERDO (CORREGIDO Y ARMONIZADO) -->
+          <!-- ==================================================== -->
+          <!-- Tallo principal curvado hacia la flor superior (85, 235) -->
+          <path class="stem" style="--delay: 0.5s;" d="M 246 480 C 228 410 185 340 145 300 C 122 275 100 255 85 235" fill="none" stroke="#2d6a4f" stroke-width="2.3" stroke-linecap="round" />
+          
+          <!-- Ramita a flor blanca media-alta (60, 265): nace sobre el tallo principal -->
+          <path class="stem" style="--delay: 1.1s;" d="M 114 267 C 95 264 78 263 60 265" fill="none" stroke="#2d6a4f" stroke-width="1.5" stroke-linecap="round" />
+          
+          <!-- Tallo lateral medio hacia flor celeste (76, 302): nace sobre el tallo principal -->
+          <path class="stem" style="--delay: 0.85s;" d="M 135 290 C 112 292 94 296 76 302" fill="none" stroke="#2d6a4f" stroke-width="1.7" stroke-linecap="round" />
+          
+          <!-- Ramita a flor blanca media-baja (74, 324): nace en la rama lateral sin tocar la flor -->
+          <path class="stem" style="--delay: 1.25s;" d="M 98 297 C 88 308 80 316 74 324" fill="none" stroke="#2d6a4f" stroke-width="1.5" stroke-linecap="round" />
+          
+          <!-- Ramita a última flor celeste (105, 338): NACE INDEPENDIENTE del tallo principal y se integra al ramo -->
+          <path class="stem" style="--delay: 1.0s;" d="M 148 308 C 132 318 118 328 105 338" fill="none" stroke="#2d6a4f" stroke-width="1.6" stroke-linecap="round" />
 
-          <!-- Tallos Ramillete Derecho -->
-          <path class="stem" style="--delay: 0.6s;" d="M 254 480 Q 315 390 360 310" fill="none" stroke="#2d6a4f" stroke-width="2.2" stroke-linecap="round" />
-          <path class="stem" style="--delay: 1.2s;" d="M 360 310 Q 390 270 415 235" fill="none" stroke="#2d6a4f" stroke-width="1.8" stroke-linecap="round" />
-          <path class="stem" style="--delay: 1.2s;" d="M 360 310 Q 405 285 440 265" fill="none" stroke="#2d6a4f" stroke-width="1.8" stroke-linecap="round" />
-          <path class="stem" style="--delay: 1.2s;" d="M 360 310 Q 400 315 428 310" fill="none" stroke="#2d6a4f" stroke-width="1.6" stroke-linecap="round" />
-          <path class="stem" style="--delay: 1.2s;" d="M 360 310 Q 405 335 438 340" fill="none" stroke="#2d6a4f" stroke-width="1.6" stroke-linecap="round" />
-          <path class="stem" style="--delay: 1.2s;" d="M 360 310 Q 385 345 405 360" fill="none" stroke="#2d6a4f" stroke-width="1.6" stroke-linecap="round" />
+          <!-- ==================================================== -->
+          <!-- TALLOS RAMILLETE DERECHO (CORREGIDO Y ARMONIZADO) -->
+          <!-- ==================================================== -->
+          <!-- Tallo principal curvado hacia la flor superior (415, 235) -->
+          <path class="stem" style="--delay: 0.6s;" d="M 254 480 C 272 410 315 340 355 300 C 378 275 400 255 415 235" fill="none" stroke="#2d6a4f" stroke-width="2.3" stroke-linecap="round" />
+          
+          <!-- Ramita a flor blanca media-alta (440, 265): nace sobre el tallo principal -->
+          <path class="stem" style="--delay: 1.15s;" d="M 386 267 C 405 264 422 263 440 265" fill="none" stroke="#2d6a4f" stroke-width="1.5" stroke-linecap="round" />
+          
+          <!-- Tallo lateral medio hacia flor celeste (424, 302): nace sobre el tallo principal -->
+          <path class="stem" style="--delay: 0.9s;" d="M 365 290 C 388 292 406 296 424 302" fill="none" stroke="#2d6a4f" stroke-width="1.7" stroke-linecap="round" />
+          
+          <!-- Ramita a flor blanca media-baja (426, 324): nace en la rama lateral sin tocar la flor -->
+          <path class="stem" style="--delay: 1.3s;" d="M 402 297 C 412 308 420 316 426 324" fill="none" stroke="#2d6a4f" stroke-width="1.5" stroke-linecap="round" />
+          
+          <!-- Ramita a última flor celeste (395, 338): NACE INDEPENDIENTE del tallo principal y se integra al ramo -->
+          <path class="stem" style="--delay: 1.05s;" d="M 352 308 C 368 318 382 328 395 338" fill="none" stroke="#2d6a4f" stroke-width="1.6" stroke-linecap="round" />
 
           <!-- Tallos Ramillete Central -->
           <path class="stem" style="--delay: 0.8s;" d="M 248 480 Q 240 435 228 395" fill="none" stroke="#2d6a4f" stroke-width="1.9" stroke-linecap="round" />
@@ -531,18 +552,18 @@
         <g class="filler-head" style="--delay: 2.3s;">
           <g transform="translate(85, 235) scale(1.6)"><use href="#mini-blue" /></g>
           <g transform="translate(60, 265) scale(1.3)"><use href="#mini-white" /></g>
-          <g transform="translate(72, 310) scale(0.9)"><use href="#mini-blue" /></g>
-          <g transform="translate(62, 340) scale(0.85)"><use href="#mini-white" /></g>
-          <g transform="translate(95, 360) scale(1.1)"><use href="#mini-blue" /></g>
+          <g transform="translate(76, 302) scale(0.9)"><use href="#mini-blue" /></g>
+          <g transform="translate(74, 324) scale(0.85)"><use href="#mini-white" /></g>
+          <g transform="translate(105, 338) scale(1.0)"><use href="#mini-blue" /></g>
         </g>
 
         <!-- Ramillete Derecho -->
         <g class="filler-head" style="--delay: 2.5s;">
           <g transform="translate(415, 235) scale(1.6)"><use href="#mini-blue" /></g>
           <g transform="translate(440, 265) scale(1.3)"><use href="#mini-white" /></g>
-          <g transform="translate(428, 310) scale(0.9)"><use href="#mini-blue" /></g>
-          <g transform="translate(438, 340) scale(0.85)"><use href="#mini-white" /></g>
-          <g transform="translate(405, 360) scale(1.1)"><use href="#mini-blue" /></g>
+          <g transform="translate(424, 302) scale(0.9)"><use href="#mini-blue" /></g>
+          <g transform="translate(426, 324) scale(0.85)"><use href="#mini-white" /></g>
+          <g transform="translate(395, 338) scale(1.0)"><use href="#mini-blue" /></g>
         </g>
 
         <!-- Ramillete Central -->
@@ -623,7 +644,7 @@
           <!-- Hocico tierno -->
           <ellipse cx="0" cy="9" rx="16" ry="12" fill="url(#goldenMuzzle)" />
 
-          <!-- NARIZ CAFÉ DE LOUI (tono característico según su foto) -->
+          <!-- NARIZ CAFÉ DE LOUI -->
           <ellipse cx="0" cy="3.5" rx="6" ry="4" fill="#6e3d2e" stroke="#522a1d" stroke-width="0.6" />
           <ellipse cx="-1.8" cy="2.5" rx="1.6" ry="0.9" fill="#ffffff" opacity="0.75" />
 
@@ -703,7 +724,7 @@
 
     <!-- TARJETA FINAL -->
     <div class="card">
-    <h1>tú&lt;3</h1>
+      <h1>tú&lt;3</h1>
       <p>21-09-2026</p>
     </div>
   </div>
