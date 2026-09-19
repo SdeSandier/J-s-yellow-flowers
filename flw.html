@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flores Amarillas</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at center, #1b262c 0%, #0f1416 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      overflow: hidden;
+      color: #eaeaea;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+    }
+
+    .flower-svg {
+      width: 320px;
+      height: 380px;
+      filter: drop-shadow(0 10px 25px rgba(247, 202, 24, 0.25));
+    }
+
+    /* Animación del tallo y hojas */
+    .stem {
+      stroke-dasharray: 400;
+      stroke-dashoffset: 400;
+      animation: growStem 2.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .leaf {
+      opacity: 0;
+      transform-origin: center;
+      animation: popLeaf 1s ease-out 1.5s forwards;
+    }
+
+    /* Animación de apertura de pétalos */
+    .petal {
+      transform-origin: 160px 140px;
+      transform: scale(0);
+      animation: bloomPetal 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    /* Retraso progresivo en los pétalos para efecto orgánico */
+    .p1  { animation-delay: 2.1s; }
+    .p2  { animation-delay: 2.2s; }
+    .p3  { animation-delay: 2.3s; }
+    .p4  { animation-delay: 2.4s; }
+    .p5  { animation-delay: 2.5s; }
+    .p6  { animation-delay: 2.6s; }
+    .p7  { animation-delay: 2.7s; }
+    .p8  { animation-delay: 2.8s; }
+    .p9  { animation-delay: 2.9s; }
+    .p10 { animation-delay: 3.0s; }
+    .p11 { animation-delay: 3.1s; }
+    .p12 { animation-delay: 3.2s; }
+
+    .center {
+      transform-origin: 160px 140px;
+      transform: scale(0);
+      animation: popCenter 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 2s forwards;
+    }
+
+    /* Mensaje dedicatoria */
+    .card {
+      margin-top: 20px;
+      opacity: 0;
+      transform: translateY(15px);
+      animation: showText 1.2s ease-out 3.4s forwards;
+      max-width: 90%;
+      margin-inline: auto;
+    }
+
+    .card h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #f7ca18;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #b0bec5;
+      line-height: 1.5;
+    }
+
+    /* Keyframes */
+    @keyframes growStem {
+      to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes popLeaf {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes bloomPetal {
+      to { transform: scale(1); }
+    }
+
+    @keyframes popCenter {
+      to { transform: scale(1); }
+    }
+
+    @keyframes showText {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <svg class="flower-svg" viewBox="0 0 320 400">
+      <!-- Tallo -->
+      <path class="stem" d="M160 140 Q150 260 160 380" fill="none" stroke="#2d6a4f" stroke-width="8" stroke-linecap="round"/>
+
+      <!-- Hojas -->
+      <path class="leaf" d="M158 280 C110 270 90 230 110 210 C140 210 155 250 158 280 Z" fill="#40916c"/>
+      <path class="leaf" d="M162 250 C210 240 230 200 210 180 C180 180 165 220 162 250 Z" fill="#52b788"/>
+
+      <!-- Pétalos exteriores -->
+      <ellipse class="petal p1"  cx="160" cy="70"  rx="18" ry="48" fill="#ffd166" transform="rotate(0 160 140)"/>
+      <ellipse class="petal p2"  cx="160" cy="70"  rx="18" ry="48" fill="#ffc300" transform="rotate(30 160 140)"/>
+      <ellipse class="petal p3"  cx="160" cy="70"  rx="18" ry="48" fill="#ffd166" transform="rotate(60 160 140)"/>
+      <ellipse class="petal p4"  cx="160" cy="70"  rx="18" ry="48" fill="#ffc300" transform="rotate(90 160 140)"/>
+      <ellipse class="petal p5"  cx="160" cy="70"  rx="18" ry="48" fill="#ffd166" transform="rotate(120 160 140)"/>
+      <ellipse class="petal p6"  cx="160" cy="70"  rx="18" ry="48" fill="#ffc300" transform="rotate(150 160 140)"/>
+      <ellipse class="petal p7"  cx="160" cy="70"  rx="18" ry="48" fill="#ffd166" transform="rotate(180 160 140)"/>
+      <ellipse class="petal p8"  cx="160" cy="70"  rx="18" ry="48" fill="#ffc300" transform="rotate(210 160 140)"/>
+      <ellipse class="petal p9"  cx="160" cy="70"  rx="18" ry="48" fill="#ffd166" transform="rotate(240 160 140)"/>
+      <ellipse class="petal p10" cx="160" cy="70"  rx="18" ry="48" fill="#ffc300" transform="rotate(270 160 140)"/>
+      <ellipse class="petal p11" cx="160" cy="70"  rx="18" ry="48" fill="#ffd166" transform="rotate(300 160 140)"/>
+      <ellipse class="petal p12" cx="160" cy="70"  rx="18" ry="48" fill="#ffc300" transform="rotate(330 160 140)"/>
+
+      <!-- Centro de la flor -->
+      <circle class="center" cx="160" cy="140" r="32" fill="#7f4f24"/>
+      <circle class="center" cx="160" cy="140" r="26" fill="#582f0e"/>
+    </svg>
+
+    <div class="card">
+      <h1>Feliz 21 de Septiembre</h1>
+      <p>Una flor amarilla que no se marchita con el tiempo.</p>
+    </div>
+  </div>
+
+</body>
+</html>
+
