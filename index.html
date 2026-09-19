@@ -19,8 +19,9 @@
       align-items: center;
       justify-content: center;
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      overflow: hidden;
+      overflow-x: hidden;
       color: #5c3d2e;
+      padding: 15px 0;
     }
 
     .container {
@@ -29,12 +30,28 @@
       text-align: center;
       position: relative;
       padding-inline: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* TÍTULO SUPERIOR "PARA TI..." */
+    .header-title {
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #9a3412;
+      text-shadow: 0 1px 14px rgba(245, 158, 11, 0.3);
+      letter-spacing: 0.8px;
+      margin-bottom: 2px;
+      opacity: 0;
+      transform: translateY(-12px);
+      animation: showHeaderTitle 1.2s ease-out 0.2s forwards;
     }
 
     .scene-svg {
       width: 100%;
       height: auto;
-      max-height: 74vh;
+      max-height: 68vh;
       filter: drop-shadow(0 15px 35px rgba(165, 90, 70, 0.18));
     }
 
@@ -140,7 +157,7 @@
 
     /* DEDICATORIA INFERIOR */
     .card {
-      margin-top: 5px;
+      margin-top: 6px;
       opacity: 0;
       transform: translateY(18px);
       animation: showCard 1.4s ease-out 4.8s forwards;
@@ -163,6 +180,13 @@
     }
 
     /* KEYFRAMES */
+    @keyframes showHeaderTitle {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     @keyframes growStem {
       to { stroke-dashoffset: 0; }
     }
@@ -210,11 +234,30 @@
         transform: translateY(0);
       }
     }
+
+    /* AJUSTES RESPONSIVOS */
+    @media (max-width: 500px) {
+      .header-title {
+        font-size: 1.75rem;
+      }
+      .scene-svg {
+        max-height: 64vh;
+      }
+      .card h1 {
+        font-size: 1.45rem;
+      }
+      .card p {
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
+    <!-- TÍTULO PRINCIPAL -->
+    <h2 class="header-title">Para la flor más hermosa</h2>
+
     <svg class="scene-svg" viewBox="0 0 620 670">
       
       <defs>
@@ -604,7 +647,7 @@
       </g>
 
       <!-- ============================================== -->
-      <!-- 3. BOLSITA DE PULULOS (CORREGIDO) -->
+      <!-- 3. BOLSITA DE PULULOS -->
       <!-- ============================================== -->
       <g transform="translate(445, 520)">
         <g class="pululos-pop">
@@ -660,10 +703,10 @@
 
     <!-- TARJETA FINAL -->
     <div class="card">
-      <h1>Feliz 21 de Septiembre</h1>
-      <p>Un ramo que florece hoy y guardará este momento para siempre.</p>
+      <h1>tú<3</h1>
+      <p>21-09-2026</p>
     </div>
   </div>
 
 </body>
-</html> 
+</html>
